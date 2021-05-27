@@ -7,9 +7,9 @@
             buildForRunning = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "111771C6423B7FD3C896FDE5"
-               BuildableName = "Gain.app"
-               BlueprintName = "Gain - App"
+               BlueprintIdentifier = "235C689F35CEBDA6944ADD49"
+               BuildableName = "Gain - All"
+               BlueprintName = "Gain - All"
                ReferencedContainer = "container:Gain.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
@@ -19,14 +19,5 @@
       useCustomWorkingDirectory = "NO"
       buildConfiguration = "Debug"
       allowLocationSimulation = "YES">
-      <BuildableProductRunnable>
-         <BuildableReference
-            BuildableIdentifier = "primary"
-            BlueprintIdentifier = "111771C6423B7FD3C896FDE5"
-            BuildableName = "Gain.app"
-            BlueprintName = "Gain - App"
-            ReferencedContainer = "container:Gain.xcodeproj">
-         </BuildableReference>
-      </BuildableProductRunnable>
    </LaunchAction>
 </Scheme>

@@ -9,10 +9,8 @@
 #include "../../dependencies/ultralight-sdk/include/AppCore/AppCore.h"
 //#include "../../dependencies/ultralight-sdk/include/JavaScriptCore/JavaScript.h"
 
-using namespace juce;
-
+// Redefine with ultralight namespace
 #define BindJSCallbackWithRetval(fn) (ultralight::JSCallbackWithRetval)std::bind(fn, this, std::placeholders::_1, std::placeholders::_2)
-
 typedef std::function<ultralight::JSObject(const ultralight::JSObject&, const ultralight::JSArgs&)> JSCallbackWithRetobj;
 #define BindJSCallbackWithRetobj(fn) (JSCallbackWithRetobj)std::bind(fn, this, std::placeholders::_1, std::placeholders::_2)
 
@@ -291,15 +289,6 @@ namespace juce_ultralight {
             tick();
         }
 
-        /*
-        ultralight::JSValue setGain(const ultralight::JSObject& thisObject, const ultralight::JSArgs& args)
-        {
-
-            juce::Logger::writeToLog("UltralightComponent::setGain");
-            return ultralight::JSValue("Hello from C++!");
-        }
-        */
-
         void sendToJS()
         {
 
@@ -374,7 +363,7 @@ namespace juce_ultralight {
             registerNativeMethod ("cpp_setParameterValue", BindJSCallbackWithRetval(&UltralightComponent::cpp_setParameterValue));
             //registerNativeMethod ("cpp_subscribeToParameter", BindJSCallbackWithRetval(&UltralightComponent::cpp_subscribeToParameter));
             
-            apvts.addParameterListener("stiffness", this);
+            apvts.addParameterListener("gain", this);
         }
 
         void setProperty(JSContextRef context, JSObjectRef obj, std::string _key, JSValueRef value)
@@ -420,7 +409,7 @@ namespace juce_ultralight {
             juce::Logger::writeToLog(name);
 
             double value = args[1].ToNumber();
-            AudioParameterFloat* parameter = dynamic_cast<AudioParameterFloat*>(apvts.getParameter("stiffness"));
+            AudioParameterFloat* parameter = dynamic_cast<AudioParameterFloat*>(apvts.getParameter(name));
             parameter->setValueNotifyingHost(value);
             //parameter->setValue(value);
             //parameter->sendValueChangedMessageToListeners(value);
