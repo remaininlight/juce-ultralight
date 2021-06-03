@@ -439,8 +439,9 @@ namespace juce_ultralight {
             using string = std::string;
             //std::ostringstream call = string ("handleCppParameterChange(") << std::to_string (0.1f) << string (")");
             std::ostringstream jsCall;
-            jsCall << "Parameters.onCppParameterChange('" << parameterId.toStdString().c_str() << "', " << 0.1f << ");";
-            
+            jsCall << "Parameters.onCppParameterChange('" << parameterId.toStdString().c_str() << "', " << newValue << ");";
+            //jsCall << "Parameters.onCppParameterChange('" << parameterId.toStdString().c_str() << "', " << 0.1f << ");";
+
             //std::string jsCallString = jsCall.str();
             //juce::Logger::writeToLog(jsCallString);
 
