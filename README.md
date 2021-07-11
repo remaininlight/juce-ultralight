@@ -1,6 +1,6 @@
 # JUCE Ultralight
 
-This repo will allow you to easily control JUCE applications using a web (HTML, CSS and Javascript) interface and development tools. Pull requests, raising issues, letting us know how you're using it all very welcome :)
+This repo will allow you to easily control JUCE C++ audio applications using a web (HTML, CSS and Javascript) interface and development tools. Pull requests, raising issues, letting us know how you're using it all very welcome :)
 
 Currently tested on macOS
 
