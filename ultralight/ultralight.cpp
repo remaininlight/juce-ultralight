@@ -10,5 +10,4 @@
 
 #include "ultralight.h"
 #include "core/ultralight_SplitComponent.cpp"
-#include "core/ultralight_Browser.cpp"
 #include "core/ultralight_UltralightComponent.cpp"

@@ -12,9 +12,9 @@
     description:        A web browser
     minimumCppStandard: 17
     dependencies:       juce_core, juce_graphics, juce_gui_basics
-    searchpaths:   ../dependencies/json-rpc-cxx/vendor
    END_JUCE_MODULE_DECLARATION
 *******************************************************************************/
+//searchpaths:   ../dependencies/json-rpc-cxx/vendor
 //  OSXLibs:       librpc
 
 #pragma once
@@ -31,7 +31,6 @@
 
 #include "core/ultralight_SplitComponent.h"
 #include "core/ultralight_Surface.h"
-#include "core/ultralight_Browser.h"
 #include "core/ultralight_UltralightComponentListener.h"
 #include "core/ultralight_UltralightComponent.h"
 #include "core/ultralight_Parameters.h"
